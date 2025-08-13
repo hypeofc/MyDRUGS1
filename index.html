@@ -4,43 +4,43 @@
   <meta charset="UTF-8">
   <title>MyDRUGS</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      background: url('https://i.imgur.com/8fKQZQv.gif') no-repeat center center fixed;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: url('https://raw.githubusercontent.com/hypeofc/MeusDRUGS1/principal/logotipo.png') no-repeat center center fixed;
       background-size: cover;
-      color: #00ffcc;
       font-family: 'Courier New', monospace;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      text-align: center;
+      color: #00ffcc;
+      text-shadow: 0 0 10px #000;
+      animation: fadeIn 2s ease-in;
     }
 
     h1 {
-      font-size: 5em;
-      text-shadow: 0 0 20px #00ffcc;
-      animation: pulse 2s infinite;
-      margin-bottom: 0.2em;
-    }
-
-    p {
-      font-size: 1.5em;
-      margin-bottom: 2em;
-      color: #cccccc;
-      text-shadow: 0 0 10px #00ffcc;
+      font-size: 4em;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      animation: glitch 1s infinite;
     }
 
     button {
+      margin-top: 30px;
       padding: 15px 30px;
       font-size: 1.2em;
       background-color: transparent;
       border: 2px solid #00ffcc;
       color: #00ffcc;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: 0.3s;
     }
 
     button:hover {
@@ -49,28 +49,29 @@
       box-shadow: 0 0 20px #00ffcc;
     }
 
-    @keyframes pulse {
-      0% { text-shadow: 0 0 10px #00ffcc; }
-      50% { text-shadow: 0 0 30px #00ffcc; }
-      100% { text-shadow: 0 0 10px #00ffcc; }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(-2px, 2px); }
+      40% { transform: translate(2px, -2px); }
+      60% { transform: translate(-1px, 1px); }
+      80% { transform: translate(1px, -1px); }
+      100% { transform: translate(0); }
     }
   </style>
 </head>
 <body>
-  <h1>MyDRUGS</h1>
-  <p>Entre no sistema. Controle é uma ilusão.</p>
-  <button onclick="entrar()">Entrar</button>
-
-  <audio autoplay loop>
-    <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Monplaisir/Monplaisir_2019/Monplaisir_-_Dark_Web.mp3" type="audio/mpeg">
-    Seu navegador não suporta áudio.
-  </audio>
+  <h1>MYDRUGS</h1>
+  <button onclick="entrar()">Entrar no sistema</button>
 
   <script>
     function entrar() {
       alert("Acesso concedido. Bem-vindo ao MyDRUGS.");
-      // Aqui você pode redirecionar para outra página futuramente
-      // window.location.href = "home.html";
+      // window.location.href = "home.html"; // Ative isso se quiser redirecionar
     }
   </script>
 </body>
