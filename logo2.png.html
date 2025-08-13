@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>MyDRUGS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: url('logo.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #00ffcc;
+      text-shadow: 0 0 10px #000;
+      animation: fadeIn 2s ease-in;
+    }
+
+    h1 {
+      font-size: 4em;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      animation: glitch 1s infinite;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: transparent;
+      border: 2px solid #00ffcc;
+      color: #00ffcc;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #00ffcc;
+      color: #000;
+      box-shadow: 0 0 20px #00ffcc;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(-2px, 2px); }
+      40% { transform: translate(2px, -2px); }
+      60% { transform: translate(-1px, 1px); }
+      80% { transform: translate(1px, -1px); }
+      100% { transform: translate(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>MYDRUGS</h1>
+  <button onclick="entrar()">Entrar no sistema</button>
+
+  <script>
+    function entrar() {
+      alert("Acesso concedido. Bem-vindo ao MyDRUGS.");
+      // window.location.href = "home.html"; // Ative isso se quiser redirecionar
+    }
+  </script>
+</body>
+</html>
