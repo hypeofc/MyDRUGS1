@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>MyDRUGS</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://i.imgur.com/8fKQZQv.gif') no-repeat center center fixed;
+      background-size: cover;
+      color: #00ffcc;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 5em;
+      text-shadow: 0 0 20px #00ffcc;
+      animation: pulse 2s infinite;
+      margin-bottom: 0.2em;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin-bottom: 2em;
+      color: #cccccc;
+      text-shadow: 0 0 10px #00ffcc;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: transparent;
+      border: 2px solid #00ffcc;
+      color: #00ffcc;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00ffcc;
+      color: #000;
+      box-shadow: 0 0 20px #00ffcc;
+    }
+
+    @keyframes pulse {
+      0% { text-shadow: 0 0 10px #00ffcc; }
+      50% { text-shadow: 0 0 30px #00ffcc; }
+      100% { text-shadow: 0 0 10px #00ffcc; }
+    }
+  </style>
+</head>
+<body>
+  <h1>MyDRUGS</h1>
+  <p>Entre no sistema. Controle é uma ilusão.</p>
+  <button onclick="entrar()">Entrar</button>
+
+  <audio autoplay loop>
+    <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Monplaisir/Monplaisir_2019/Monplaisir_-_Dark_Web.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <script>
+    function entrar() {
+      alert("Acesso concedido. Bem-vindo ao MyDRUGS.");
+      // Aqui você pode redirecionar para outra página futuramente
+      // window.location.href = "home.html";
+    }
+  </script>
+</body>
+</html>
